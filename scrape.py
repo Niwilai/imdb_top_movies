@@ -5,8 +5,8 @@ import requests
 import sys
 import json
 
-print("How many of the top movies do you want to get?")
-amount = int(raw_input())
+amount = int(raw_input("How many of the top movies do you want to get?\n"))
+
 if amount % 50 != 0:
     amount = int(raw_input("Please type a number in steps of 50\n"))
 
