@@ -16,7 +16,7 @@ all_titles = []
 
 for idx in range(pages):
     url = "{}{}".format(base_url, idx)
-    page = requests.get(url)
+    page = requests.get(url, headers={'Accept-Language': 'en-EN'}) # change your language here
 
     tree = html.fromstring(page.content)
     titles_arr = tree.xpath("//span[@class='lister-item-header']/span/a/text()")
